@@ -1,69 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chyke Web Craft Agency</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1F2937',
+            gold: '#FBBF24',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-navy font-sans">
 
   <!-- Header -->
-  <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <img src="logo.png" alt="Chyke Web Craft Logo" class="h-12">
-      <span class="text-xl font-semibold text-yellow-600">Chyke Web Craft</span>
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="Chyke Logo" class="h-10 w-auto">
+        <span class="text-xl font-bold text-navy">Chyke Web Craft</span>
+      </div>
+
+      <!-- Navigation Toggle (Mobile) -->
+      <div class="md:hidden">
+        <button id="menuBtn" class="text-navy focus:outline-none focus:ring-2 focus:ring-gold">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav id="navMenu" class="hidden md:flex space-x-6">
+        <a href="#" class="text-navy hover:text-gold font-medium">Home</a>
+        <a href="#" class="text-navy hover:text-gold font-medium">Services</a>
+        <a href="#" class="text-navy hover:text-gold font-medium">About</a>
+        <a href="#" class="text-navy hover:text-gold font-medium">Contact</a>
+      </nav>
+
+      <!-- Email -->
+      <a href="mailto:info@chykewebcraft.com" class="hidden md:block text-sm text-navy hover:text-gold">info@chykewebcraft.com</a>
     </div>
-    <a href="mailto:info@chykewebcraft.com" class="text-sm text-yellow-700 hover:text-yellow-800">info@chykewebcraft.com</a>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#" class="block py-2 text-navy hover:text-gold">Home</a>
+      <a href="#" class="block py-2 text-navy hover:text-gold">Services</a>
+      <a href="#" class="block py-2 text-navy hover:text-gold">About</a>
+      <a href="#" class="block py-2 text-navy hover:text-gold">Contact</a>
+      <a href="mailto:info@chykewebcraft.com" class="block py-2 text-sm text-navy hover:text-gold">info@chykewebcraft.com</a>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="text-center py-16 px-6 bg-yellow-50">
-    <h1 class="text-4xl font-bold text-yellow-700 mb-4">Custom Websites & SEO That Keep HVAC Leads Flowing</h1>
-    <p class="text-lg mb-2">We design high-converting websites and local SEO systems specifically for HVAC contractors. More calls. More bookings. Less hassle.</p>
-    <p class="text-yellow-800 font-semibold">Call to Action: Get a Free HVAC Site Audit | See Our Work</p>
+  <!-- Hero -->
+  <section class="text-center py-16 md:py-20 bg-gold text-white px-6">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">Custom Websites & SEO That Keep HVAC Leads Flowing</h1>
+    <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">We design high-converting websites and local SEO systems specifically for HVAC contractors. More calls. More bookings. Less hassle.</p>
+    <div class="flex flex-col md:flex-row justify-center gap-4">
+      <a href="#" class="bg-white text-navy font-semibold py-3 px-6 rounded-lg shadow hover:bg-gray-100">Get a Free HVAC Site Audit</a>
+      <a href="#" class="bg-navy text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-gray-800">See Our Work</a>
+    </div>
   </section>
 
-  <!-- Problem/Solution Block -->
-  <section class="py-12 px-6">
-    <h2 class="text-2xl font-bold text-yellow-700 mb-3">HVAC Experts Deserve Expert Digital Presence</h2>
-    <p>If your website is slow, outdated, or not showing up on Google, you’re losing leads daily. We help HVAC companies look professional, rank higher, and turn clicks into calls—without the tech headaches.</p>
+  <!-- Problem/Solution -->
+  <section class="py-16 px-4 md:px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-navy mb-4">HVAC Experts Deserve Expert Digital Presence</h2>
+    <p class="text-gray-700 mb-6">If your website is slow, outdated, or not showing up on Google, you’re losing leads daily. We help HVAC companies look professional, rank higher, and turn clicks into calls—without the tech headaches.</p>
+    <a href="#" class="inline-block bg-gold text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-yellow-500">Fix My Site</a>
   </section>
 
-  <!-- Services Section -->
-  <section class="py-12 px-6 bg-yellow-50">
-    <h2 class="text-2xl font-bold text-yellow-700 mb-4">What We Do Best for HVAC Pros</h2>
-    <ul class="list-disc pl-5 space-y-2">
+  <!-- Services -->
+  <section class="py-16 px-4 md:px-6 bg-gray-50">
+    <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6 text-center">What We Do Best for HVAC Pros</h2>
+    <ul class="max-w-4xl mx-auto list-disc pl-6 space-y-3 text-gray-800 text-left">
       <li><strong>Custom Website Design:</strong> Built for speed, mobile use, and conversions—your digital storefront.</li>
       <li><strong>Local SEO:</strong> Get found by homeowners searching "AC repair near me" in your service area.</li>
       <li><strong>Lead Funnels & Booking Integration:</strong> Automated systems to capture and convert leads 24/7.</li>
       <li><strong>Ongoing Support & Growth Plans:</strong> We don’t just launch—we help you grow month after month.</li>
     </ul>
+    <div class="text-center mt-8">
+      <a href="#" class="inline-block bg-navy text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-gray-800">Explore Services</a>
+    </div>
   </section>
 
-  <!-- Why Choose Us Section -->
-  <section class="py-12 px-6">
-    <h2 class="text-2xl font-bold text-yellow-700 mb-4">Why HVAC Contractors Trust Chyke Web Craft</h2>
-    <ul class="list-disc pl-5 space-y-2">
+  <!-- Why Choose Us -->
+  <section class="py-16 px-4 md:px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-navy mb-6">Why HVAC Contractors Trust Chyke Web Craft</h2>
+    <ul class="list-disc pl-6 space-y-3 text-gray-800 text-left">
       <li><strong>HVAC Focused:</strong> We understand your customers and your competition.</li>
       <li><strong>Performance Driven:</strong> Fast-loading, SEO-optimized sites that rank and convert.</li>
       <li><strong>Done-for-You:</strong> We handle everything while you run your business.</li>
     </ul>
+    <a href="#" class="inline-block mt-8 bg-gold text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-yellow-500">Why It Works</a>
   </section>
 
-  <!-- Final CTA Section -->
-  <section class="py-12 px-6">
-    <h2 class="text-2xl font-bold text-yellow-700 mb-3">Ready to Turn Your HVAC Website into a Lead Machine?</h2>
-    <p>Let’s build you a site that works as hard as your technicians do.</p>
-    <p class="text-yellow-800 font-semibold mt-2">Call to Action: Book a Free Strategy Session</p>
+  <!-- Case Study -->
+  <section class="py-16 px-4 md:px-6 bg-gray-50 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-navy mb-4">See How We Helped CoolAir Pros 3x Their Website Leads</h2>
+    <p class="text-gray-700 max-w-3xl mx-auto">From 12 calls/month to 39+ calls in just 60 days. Read the full story of how we helped a local HVAC company dominate their market.</p>
+    <a href="#" class="inline-block mt-6 bg-navy text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-gray-800">Read the Case Study</a>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 px-4 text-center bg-gold text-white">
+    <h2 class="text-3xl font-bold mb-4">Ready to Turn Your HVAC Website into a Lead Machine?</h2>
+    <p class="text-lg mb-6">Let’s build you a site that works as hard as your technicians do.</p>
+    <a href="#" class="bg-white text-navy font-semibold py-3 px-6 rounded-lg shadow hover:bg-gray-100">Book a Free Strategy Session</a>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-yellow-100 py-6 px-6 text-center text-sm text-gray-700 mt-12">
+  <footer class="bg-navy text-white text-sm py-8 text-center">
     <p>&copy; 2025 Chyke Web Craft Agency. All rights reserved.</p>
     <p>Digital craftsmanship for HVAC pros who don’t settle.</p>
-    <p class="mt-2">Quick Links: <a href="#" class="text-yellow-700 hover:underline">Home</a> | <a href="#" class="text-yellow-700 hover:underline">Services</a> | <a href="#" class="text-yellow-700 hover:underline">About</a> | <a href="#" class="text-yellow-700 hover:underline">Contact</a></p>
+    <p class="mt-2">
+      Quick Links: 
+      <a href="#" class="text-gold hover:underline">Home</a> | 
+      <a href="#" class="text-gold hover:underline">Services</a> | 
+      <a href="#" class="text-gold hover:underline">About</a> | 
+      <a href="#" class="text-gold hover:underline">Contact</a>
+    </p>
   </footer>
+
+  <!-- JavaScript: Mobile Nav Toggle -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
