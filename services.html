@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | HCAC – Home Climate & Air Control</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1F2937',
+            gold: '#FBBF24',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-navy font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="img/CVAC logo.png" alt="CVAC logo.png" class="h-10 w-auto">
+        <span class="text-xl font-bold text-navy">HCAC – Home Climate & Air Control</span>
+      </div>
+      <div class="md:hidden">
+        <button id="menuBtn" class="text-navy focus:outline-none focus:ring-2 focus:ring-gold">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <nav id="navMenu" class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-navy hover:text-gold font-medium">Home</a>
+        <a href="services.html" class="text-navy hover:text-gold font-medium">Services</a>
+        <a href="#" class="text-navy hover:text-gold font-medium">About</a>
+        <a href="#" class="text-navy hover:text-gold font-medium">Contact</a>
+      </nav>
+      <a href="mailto:chykewebcraft.agency@gmail.com" class="hidden md:block text-sm text-navy hover:text-gold">chykewebcraft.agency@gmail.com</a>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2 text-navy hover:text-gold">Home</a>
+      <a href="services.html" class="block py-2 text-navy hover:text-gold">Services</a>
+      <a href="#" class="block py-2 text-navy hover:text-gold">About</a>
+      <a href="#" class="block py-2 text-navy hover:text-gold">Contact</a>
+      <a href="chykewebcraft.agency@gmail.com" class="block py-2 text-sm text-navy hover:text-gold">chykewebcraft.agency@gmail.com</a>
+    </div>
+  </header>
+
+  <!-- Services Hero -->
+  <section class="text-center py-16 md:py-20 bg-gold text-white px-6">
+    <h1 class="text-4xl font-bold mb-4">Our HVAC Digital Services</h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto">We provide full-stack website design, local SEO, and lead generation systems tailored for HVAC businesses to grow consistently online.</p>
+  </section>
+
+  <!-- Services List -->
+  <section class="py-16 px-4 md:px-6 bg-white max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="border p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="images/website-design.jpg" alt="Custom Website Design" class="rounded mb-4 w-full h-48 object-cover">
+        <h2 class="text-xl font-bold text-navy mb-2">Custom Website Design</h2>
+        <p class="text-gray-700 mb-4">Mobile-friendly, fast, and built to convert. We design your HVAC site like a high-performance sales tool.</p>
+        <a href="#" class="inline-block bg-navy text-white py-2 px-4 rounded hover:bg-gray-800">Learn More</a>
+      </div>
+      <div class="border p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="images/local-seo.jpg" alt="Local SEO Optimization" class="rounded mb-4 w-full h-48 object-cover">
+        <h2 class="text-xl font-bold text-navy mb-2">Local SEO Optimization</h2>
+        <p class="text-gray-700 mb-4">Dominate local Google search results and drive traffic from nearby homeowners looking for HVAC services.</p>
+        <a href="#" class="inline-block bg-navy text-white py-2 px-4 rounded hover:bg-gray-800">Learn More</a>
+      </div>
+      <div class="border p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="images/lead-funnel.jpg" alt="Lead Funnel Setup" class="rounded mb-4 w-full h-48 object-cover">
+        <h2 class="text-xl font-bold text-navy mb-2">Lead Funnel Setup</h2>
+        <p class="text-gray-700 mb-4">We implement call-to-action systems, booking tools, and contact forms that bring in leads 24/7.</p>
+        <a href="#" class="inline-block bg-navy text-white py-2 px-4 rounded hover:bg-gray-800">Learn More</a>
+      </div>
+      <div class="border p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="images/support-plan.jpg" alt="Growth & Support Plans" class="rounded mb-4 w-full h-48 object-cover">
+        <h2 class="text-xl font-bold text-navy mb-2">Growth & Support Plans</h2>
+        <p class="text-gray-700 mb-4">Monthly plans to keep your site optimized, updated, and growing with SEO and design tweaks.</p>
+        <a href="#" class="inline-block bg-navy text-white py-2 px-4 rounded hover:bg-gray-800">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center py-16 px-4 bg-gold text-white">
+    <h2 class="text-3xl font-bold mb-4">Not Sure Which Service You Need?</h2>
+    <p class="text-lg mb-6">Let’s talk about your HVAC business goals and pick the right solution for you.</p>
+    <a href="#" class="bg-white text-navy font-semibold py-3 px-6 rounded-lg shadow hover:bg-gray-100">Schedule a Free Strategy Call</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white text-sm py-8 text-center">
+    <p>&copy; 2025 Chyke Web Craft Agency. All rights reserved.</p>
+    <p>Digital craftsmanship for HVAC pros who don’t settle.</p>
+    <p class="mt-2">
+      Quick Links: 
+      <a href="index.html" class="text-gold hover:underline">Home</a> | 
+      <a href="services.html" class="text-gold hover:underline">Services</a> | 
+      <a href="#" class="text-gold hover:underline">About</a> | 
+      <a href="#" class="text-gold hover:underline">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
